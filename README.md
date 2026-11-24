@@ -12,6 +12,14 @@
 
 Üniversite öğrencilerine yönelik Flutter tabanlı sosyal ağ projesi.
 
+## Proje bağlamı
+
+Üniversite eğitimi sırasında geliştirilen, mobil uygulama mimarisi ve bulut servis entegrasyonlarına odaklanan bir sosyal ağ projesidir. Bu depo, öğrenme sürecindeki tasarım ve uygulama çalışmalarını portföy kapsamında sunar.
+
+### Servis entegrasyonları
+
+Özgün API anahtarları ve kişisel bulut yapılandırmaları bu portföy sürümüne dahil değildir. Eski servis bağlantıları kullanım dışı bırakılmıştır. Entegrasyonları çalıştırmak için kendi Firebase/Appwrite projenizi ve ilgili API sağlayıcılarında kendi anahtarlarınızı oluşturup yerel yapılandırma üzerinden sağlamanız gerekir. Bu gereksinim, kişisel hesaplardan bağımsız ve yeniden kurulabilir bir örnek sunmak için bilinçli bir tercihtir.
+
 ## Kaynakta bulunan özellikler
 
 - Kullanıcı kaydı, giriş ve profil ekranları
@@ -39,8 +47,13 @@ flutter run --dart-define=APPWRITE_ENDPOINT=https://cloud.appwrite.io/v1 --dart-
 
 Sunucu fonksiyonlarının API anahtarları yalnızca sunucu ortam değişkenlerinde tutulmalıdır. Mobil uygulamaya yönetici anahtarı eklemeyin. `.gitignore` geçmişte commit edilmiş verileri temizlemez.
 
-## İnceleme durumu
+## Teknik durum
 
-Bu kopyada sabit proje bilgileri dış yapılandırmaya taşındı; özgün Firebase yapılandırması ve yönetim amaçlı kurulum dosyaları çıkarıldı. Sertifika doğrulamasını devre dışı bırakan Appwrite ayarı kaldırıldı. Var olan dosyalara işaret ettiği doğrulanan 27 hatalı göreli import yolu düzeltildi; bu, Flutter derlemesinin geçtiği anlamına gelmez.
+Bu sürümde servis yapılandırması dışarıdan sağlanır ve Appwrite sertifika doğrulaması açıktır.
 
-Flutter/Android/iOS derlemeleri ve canlı servis entegrasyonu bu ortamda çalıştırılmadı. Bu kaynaklar üretim güvenliği onayı taşımaz. Özellikle sunucudaki belge izinleri ve kullanıcılar arası erişim ayrıca doğrulanmalıdır.
+<details>
+<summary>Doğrulama kapsamı ve geliştirme notları</summary>
+
+Flutter/Android/iOS derlemeleri ve canlı servis entegrasyonu bu ortamda çalıştırılmadı. Kaynaklardaki göreli import yolları kontrol edildi. Kendi sunucu ortamınızda koleksiyon/belge izinleri ve kullanıcılar arası erişim kontrolleri ayrıca doğrulanmalıdır.
+
+</details>
